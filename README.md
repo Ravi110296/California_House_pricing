@@ -1,5 +1,5 @@
 # California_House_pricing
-Predicting the House prices in California estate
+Predicting the House prices in California estate, The web app for the model can be accessed using this [link](https://square-plush-llama.anvil.app)
 
 ## Softwares and tools requirement
 1. [Github_Account](https://github.com)
