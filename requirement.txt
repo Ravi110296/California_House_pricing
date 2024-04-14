@@ -1,7 +1,7 @@
-Flask
 scikit-learn
 pandas
 numpy
 matplotlib
+Flask
 seaborn
-anvil-uplink
+gunicorn

@@ -4,8 +4,8 @@ Predicting the House prices in California estate, The web app for the model can 
 ## Softwares and tools requirement
 1. [Github_Account](https://github.com)
 2. [VS_Studio_Code](https://code.visualstudio.com/)
-3. [Heroku_Account](https://heroku.com)
-4. [Git_CLI](https://git-scm.com)
+3. [Git_CLI](https://git-scm.com)
+4. [Heroku_Account](https://heroku.com/)
 
 ## Creating a vitual environment
 
@@ -26,7 +26,7 @@ command to install the requirements in the virtual environment
 ```
 pip install -r requirement.txt
 ```
-***Note: requirement.txt is nor originally created with the package, you have to create a txt file in directory with all the required libraries name***
+***Note: requirement.txt is not originally created with the package, you have to create a txt file in directory with all the required libraries name***
 
 ## Pushing files on Github
 

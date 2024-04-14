@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>California House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="MedInc" placeholder="median income in block group" required="required" /><br>
+    	<input type="text" name="HouseAge" placeholder="median house age in block group" required="required" /><br>
+        <input type="text" name="AveRooms" placeholder="average number of rooms per household" required="required" /><br>
+        <input type="text" name="AveBedrms" placeholder="average number of bedrooms per household" required="required" /><br>
+        <input type="text" name="Population" placeholder="block group population" required="required" /><br>
+        <input type="text" name="AveOccup" placeholder="average number of household members" required="required" /><br>
+        <input type="text" name="Latitude" placeholder="block group latitude" required="required" /><br>
+        <input type="text" name="Longitude" placeholder="block group longitude" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
