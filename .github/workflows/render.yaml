@@ -1,0 +1,48 @@
+# Your workflow name.
+name: Deploy to render.
+
+# Run workflow on every push to main branch.
+on:
+  push:
+    branches: [main]
+
+# Your workflows jobs.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Check-out your repository.
+      - name: Checkout
+        uses: actions/checkout@v2
+
+# Exported from Render on 2024-04-14T14:07:00Z
+services:
+- type: web
+  name: California_House_pricing # Your custom step name
+  runtime: docker
+  repo: https://github.com/Ravi110296/California_House_pricing
+  plan: free
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeploy: false
+  uses: johnbeynon/render-deploy-action@v0.0.8 # GitHub action name
+  with:
+    # Below you must provide variables for your Render app.
+
+    # The email address associated with your Render account.
+    # If you don't want to use repository secrets (which is recommended) you can do:
+    # email: my.email@example.com
+      email: ${{ secrets.Render_EMAIL }}
+          
+    # Render API key associated with provided user's email.
+    # Api Key is available under your Render account settings.
+      render_api_key: ${{ secrets.Render_API_KEY }}
+          
+    # Name of the render application to which the build is to be sent.
+      service-id: ${{ secrets.service-id }}
+
+    # (Optional, default: "")
+    # Additional options of docker build command.
+      docker_options: "--no-cache"
+version: "1"
