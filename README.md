@@ -5,7 +5,7 @@ Predicting the House prices in California estate, The web app for the model can 
 1. [Github_Account](https://github.com)
 2. [VS_Studio_Code](https://code.visualstudio.com/)
 3. [Git_CLI](https://git-scm.com)
-4. [Heroku_Account](https://heroku.com/)
+4. [Render](https://render.com)
 
 ## Creating a vitual environment
 
