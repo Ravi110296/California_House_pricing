@@ -1,10 +1,6 @@
 FROM python:3.11
-ADD /requirement.txt /
-ADD /regmodel.pkl / 
-ADD /scaler.pkl / 
-RUN pip install -r /requirement.txt
-ADD California House value Prediction.ipynb /
-
-ENV PYTHONUNBUFFERED=1
-
-CMD [ "python","-m","notebook","./California House value Prediction.ipynb","--allow-root"]
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirement.txt
+EXPOSE $PORT 
+CMD gunicorn --workers = 4 --bind 0.0.0.0:$PORT app:app
